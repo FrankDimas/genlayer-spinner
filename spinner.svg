@@ -1,11 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="GenLayer loading">
   <style>
-    .core{fill:#110FFF;transform-origin:24px 24px;animation:spin 1.2s cubic-bezier(.45,.05,.55,.95) infinite}
-    @keyframes spin{
-      0%{transform:rotate(0) scale(1);opacity:1}
-      50%{transform:rotate(180deg) scale(.75);opacity:.55}
-      100%{transform:rotate(360deg) scale(1);opacity:1}
+    .outer {
+      fill: #110FFF;
+      transform-origin: 24px 24px;
+      animation: spin 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    }
+    .inner {
+      fill: #110FFF;
+      transform-origin: 24px 24px;
+      animation: spin 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite reverse;
+      opacity: 0.55;
+    }
+    @keyframes spin {
+      0%   { transform: rotate(0deg) scale(1); }
+      50%  { transform: rotate(180deg) scale(0.82); }
+      100% { transform: rotate(360deg) scale(1); }
     }
   </style>
-  <polygon class="core" points="24,8 38,38 24,31 10,38"/>
+
+  <!-- Внешний треугольник -->
+  <polygon class="outer" points="24,6 40,40 24,32 8,40"/>
+
+  <!-- Внутренний треугольник -->
+  <polygon class="inner" points="24,16 32,34 24,29 16,34"/>
 </svg>
