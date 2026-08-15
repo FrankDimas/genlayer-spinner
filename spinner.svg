@@ -1,4 +1,3 @@
-<!-- Размер 128×128 (viewBox не меняем — SVG масштабируется) -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="128" height="128" role="img" aria-label="GenLayer loading">
   <style>
     .v3-ring {
@@ -12,4 +11,4 @@
   </style>
   <circle class="v3-ring" cx="24" cy="24" r="18"/>
   <polygon class="v3-core" points="24,17 31,31 24,27 17,31"/>
-</svg>>
+</svg>
