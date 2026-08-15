@@ -1,26 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="GenLayer loading">
   <style>
-    .outer {
-      fill: #110FFF;
-      transform-origin: 24px 24px;
-      animation: spin 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    .v3-ring {
+      fill: none; stroke: #110FFF; stroke-width: 3; stroke-linecap: round;
+      stroke-dasharray: 18 90; transform-origin: 24px 24px;
+      animation: v3-spin 1.2s cubic-bezier(0.5,0,0.5,1) infinite;
     }
-    .inner {
-      fill: #110FFF;
-      transform-origin: 24px 24px;
-      animation: spin 1.35s cubic-bezier(0.4, 0, 0.2, 1) infinite reverse;
-      opacity: 0.55;
-    }
-    @keyframes spin {
-      0%   { transform: rotate(0deg) scale(1); }
-      50%  { transform: rotate(180deg) scale(0.82); }
-      100% { transform: rotate(360deg) scale(1); }
-    }
+    .v3-core { fill: #110FFF; transform-origin: 24px 24px; animation: v3-pulse 1.2s ease-in-out infinite; }
+    @keyframes v3-spin { to { transform: rotate(360deg); } }
+    @keyframes v3-pulse { 0%,100% { transform: scale(0.9); opacity:0.8; } 50% { transform: scale(1.1); opacity:1; } }
   </style>
-
-  <!-- Внешний треугольник -->
-  <polygon class="outer" points="24,6 40,40 24,32 8,40"/>
-
-  <!-- Внутренний треугольник -->
-  <polygon class="inner" points="24,16 32,34 24,29 16,34"/>
+  <circle class="v3-ring" cx="24" cy="24" r="18"/>
+  <polygon class="v3-core" points="24,17 31,31 24,27 17,31"/>
 </svg>
