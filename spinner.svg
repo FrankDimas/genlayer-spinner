@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <style>
+    .core{fill:#110FFF;transform-origin:24px 24px;animation:spin 1.2s cubic-bezier(.45,.05,.55,.95) infinite}
+    @keyframes spin{
+      0%{transform:rotate(0) scale(1);opacity:1}
+      50%{transform:rotate(180deg) scale(.75);opacity:.55}
+      100%{transform:rotate(360deg) scale(1);opacity:1}
+    }
+  </style>
+  <polygon class="core" points="24,8 38,38 24,31 10,38"/>
+</svg>
